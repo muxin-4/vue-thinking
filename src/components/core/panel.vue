@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <section :class="[panelClass, canme]">
     <h4>-{{ title }}-</h4>
     <div>{{ content }}</div>
@@ -34,7 +34,7 @@ export default {
 
 </script>
 <style lang='scss' scoped>
-@import '@/css/element.scss';
+@import '../../css/element.scss';
 .panel {
   @include panel;
 }

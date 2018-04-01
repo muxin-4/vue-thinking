@@ -21,9 +21,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/css/element.scss';
+@import '../../css/element.scss';
 .btn {
   @include btn;
 }
 </style>
-

@@ -8,18 +8,15 @@
 </template>
 
 <script>
-import btn from '../core/btn.vue';
+import btn from '../core/btn.vue'
 export default {
-  data () {
-    return {
-    }
-  },
   components: {
     btn
   },
-  computed: {},
-  mounted: {},
-  methods: {}
+  data () {
+    return {
+    }
+  }
 }
 </script>
 <style lang='scss' module>
@@ -40,6 +37,7 @@ export default {
     height: 30px;
     line-height: 30px;
     margin: 17px 0 0 18px;
+    color: #666;
   }
   .btnDownload {
     float: right;

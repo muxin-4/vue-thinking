@@ -1,21 +1,21 @@
 <template lang="html">
   <div>
     <Heador />
+    <Slider />
   </div>
 </template>
 
 <script>
 import Heador from '@/components/public/header.vue'
+import Slider from './hslider.vue'
 
 export default {
   components: {
-    Heador
+    Heador,
+    Slider
   }
 }
 </script>
 
 <style lang="scss" module>
-.home {
-  color: red;
-}
 </style>

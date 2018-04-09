@@ -1,7 +1,7 @@
 <template lang="html">
   <section :class="[panelClass, canme]">
-    <h4>-{{ title }}-</h4>
-    <div>{{ content }}</div>
+    <h4>- {{ title }} -</h4>
+    <slot/>
   </section>
 </template>
 
@@ -21,21 +21,9 @@ export default {
     return {
       panelClass: "panel",
     };
-  },
-
-  components: {},
-
-  computed: {},
-
-  mounted: {},
-
-  methods: {}
+  }
 }
 
 </script>
-<style lang='scss' scoped>
-@import '../../css/element.scss';
-.panel {
-  @include panel;
-}
+<style lang='scss' module>
 </style>

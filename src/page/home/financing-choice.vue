@@ -1,33 +1,12 @@
 <template lang='html'>
   <Panel title="理财精选" :class="$style.panel">
     <section :class="$style.content">
-      <div :class="$style.item">
+      <div :class="$style.item" v-for="item in items" :key="item.title">
         <p :class="$style.title">
-          <span>定期理财</span><label>90天可质押</label>
+          <span>{{ item.title }}</span><label>{{ item.sub }}</label>
         </p>
-        <p :class="$style.value">5.50%</p>
-        <p :class="$style.desc">历史年化结算利率</p>
-      </div>
-      <div :class="$style.item">
-        <p :class="$style.title">
-          <span>定期理财</span><label>90天可质押</label>
-        </p>
-        <p :class="$style.value">5.50%</p>
-        <p :class="$style.desc">历史年化结算利率</p>
-      </div>
-      <div :class="$style.item">
-        <p :class="$style.title">
-          <span>定期理财</span><label>90天可质押</label>
-        </p>
-        <p :class="$style.value">5.50%</p>
-        <p :class="$style.desc">历史年化结算利率</p>
-      </div>
-      <div :class="$style.item">
-        <p :class="$style.title">
-          <span>定期理财</span><label>90天可质押</label>
-        </p>
-        <p :class="$style.value">5.50%</p>
-        <p :class="$style.desc">历史年化结算利率</p>
+        <p :class="$style.value">{{ item.rate }}</p>
+        <p :class="$style.desc">{{ item.text }}</p>
       </div>
     </section>
   </Panel>
@@ -40,7 +19,32 @@ export default {
 		Panel,
 	},
 	data() {
-		return {}
+		return {
+      items: [{
+        title: '定期理财',
+        sub: '理财首选',
+        rate: '5.60',
+        text: '历史年化回报率'
+      },
+      {
+        title: '年年盈',
+        sub: '理财推荐',
+        rate: '5.80',
+        text: '综合年化收益率'
+      },
+      {
+        title: '基智账户',
+        sub: '组合投资',
+        rate: '8%-10%',
+        text: '止盈年化收益率'
+      },
+      {
+        title: '小白基金',
+        sub: '超短期',
+        rate: '5.00%',
+        text: '7日年化收益率'
+      }],
+    }
 	},
 }
 </script>
@@ -66,6 +70,18 @@ export default {
 	}
 	.content {
 		@include list(row);
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 0;
+      box-sizing: border-box;
+      border-bottom: 1px solid #eee;
+      transform: scaleY(.5);
+      transform-origin: 0 0;
+      position: relative;
+      top: -208px;
+    }
 		.item {
 			width: 50%;
 			padding-left: 32px;
@@ -73,6 +89,26 @@ export default {
 			box-sizing: border-box;
 			position: relative;
 
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1px;
+        display: block;
+        background: #eee;
+        -webkit-transform: scaleX(.5);
+        -ms-transform: scaleX(.5);
+        transform: scaleX(.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        height: 136px;
+        top: 40px;
+      }
+      &:nth-child(2n) {
+        &:after {
+          display: none;
+        }
+      }
 			.title {
 				font-family: PingFangSC-Medium;
 				color: #333;

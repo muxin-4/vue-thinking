@@ -3,6 +3,7 @@
     <Heador />
     <Slider />
     <FinancingChoice />
+    <Product />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Heador from '@/components/public/header.vue'
 import Slider from './hslider.vue'
 import FinancingChoice from './financing-choice.vue'
+import Product from './product.vue'
 
 export default {
   components: {
     Heador,
     Slider,
-    FinancingChoice
+    FinancingChoice,
+    Product
   }
 }
 </script>

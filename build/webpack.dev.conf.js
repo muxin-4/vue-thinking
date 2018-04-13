@@ -1,18 +1,19 @@
 'use strict'
-const utils = require('./utils')
-const webpack = require('webpack')
-const config = require('../config')
-const merge = require('webpack-merge')
-const path = require('path')
-const baseWebpackConfig = require('./webpack.base.conf')
+const utils = require('./utils') // 使用一些小工具
+const webpack = require('webpack') // 使用 webpack
+const config = require('../config') // 同样的使用了 config/index.js
+const merge = require('webpack-merge')  // 使用 webpack 配置合并插件
+const path = require('path') // 使用 NodeJS 自带的文件路径插件
+const baseWebpackConfig = require('./webpack.base.conf') // 加载 webpack.base.conf
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin') /* 使用 html-webpack-plugin 插件，这个插件可以帮我们自动生成 html 并且注入到 .html 文件中 */
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+/* 将我们 webpack.dev.conf.js 的配置和 webpack.base.conf.js 的配置合并 */
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })

@@ -1,7 +1,7 @@
 'use strict'
-const path = require('path')
-const utils = require('./utils')
-const config = require('../config')
+const path = require('path') // 使用 NodeJS 自带的文件路径插件
+const utils = require('./utils') // 引入一些小工具
+const config = require('../config') // 引入 config/index.js
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {

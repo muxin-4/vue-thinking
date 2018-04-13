@@ -15,6 +15,9 @@
 <script>
 import Slider from '@/components/core/slider.vue'
 export default {
+  components: {
+    Slider
+  },
 	data() {
 		return {
 			items: [
@@ -66,19 +69,13 @@ export default {
 				},
 			],
 		}
-	},
-	components: {
-    Slider
-  }
+	}
 }
 </script>
 <style lang='scss' module>
 @import '../../css/element.scss';
 .slider {
 	margin-top: 120px;
-  img {
-    width: 100%;
-  }
 }
 .list {
 	@include list(row);

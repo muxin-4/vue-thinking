@@ -56,7 +56,7 @@ export default {
       font-size: 24px;
       >img {
         width: 100%;
-        height: 185px;
+        height: 168px;
       }
       &:nth-child(2) {
         @include flex(row);

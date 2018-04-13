@@ -23,13 +23,13 @@ export default {
       items: [{
         title: '定期理财',
         sub: '理财首选',
-        rate: '5.60',
+        rate: '5.60%',
         text: '历史年化回报率'
       },
       {
         title: '年年盈',
         sub: '理财推荐',
-        rate: '5.80',
+        rate: '5.80%',
         text: '综合年化收益率'
       },
       {

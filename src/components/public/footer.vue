@@ -18,10 +18,10 @@
           <p>电脑版</p>
         </div>
       </li>
-      <li>Copyright © 2004-2018 京东JD.com 版权所有</li>
-      <li>投资有风险，购买需谨慎</li>
-      <li>京东金融平台服务协议</li>
-      <li>京东金融隐私政策</li>
+      <li><p>Copyright © 2004-2018 京东JD.com 版权所有</p></li>
+      <li><p>投资有风险，购买需谨慎</p></li>
+      <li><p>京东金融平台服务协议</p></li>
+      <li><p>京东金融隐私政策</p></li>
     </ul>
   </Panel>
 </template>
@@ -89,10 +89,31 @@ export default {
         }
       }
       &:nth-child(n+3) {
-        padding: 24px 0;
-        height: 43px;
-        line-height: 43px;
-        border-top: 1px solid #ddd;
+        min-height: 36px;
+
+        p {
+          font-size: 24px;
+          line-height: 1.6;
+          padding: 24px 32px;
+          text-align: center;
+          color: #999;
+          position: relative;
+          box-sizing: border-box;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            display: block;
+            transform: scaleY(.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            background: #DDD;
+          }
+        }
       }
     }
   }

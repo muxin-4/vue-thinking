@@ -3,6 +3,8 @@
     <Heador />
     <Slider />
     <Benefit />
+    <Activity />
+    <Serve />
     <Footor />
     <Navbar />
   </div>
@@ -14,6 +16,8 @@ import Footor from '@/components/public/footer.vue'
 import Navbar from '@/components/public/navbar.vue'
 import Slider from './islider.vue'
 import Benefit from './benefit.vue'
+import Activity from './activity'
+import Serve from './serve'
 
 export default {
   components: {
@@ -22,6 +26,8 @@ export default {
     Footor,
     Navbar,
     Slider,
+    Activity,
+    Serve
   }
 }
 </script>

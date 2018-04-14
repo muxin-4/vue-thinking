@@ -43,56 +43,56 @@ export default {
 <style lang='scss' module>
 @import '../../css/element';
 .panel {
-  @include panel;
-  margin: 20px 0  0;
-  > h4 {
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      display: block;
-      background: #eee;
-      -webkit-transform: scaleY(.5);
-      -ms-transform: scaleY(.5);
-      transform: scaleY(.5);
-      -webkit-transform-origin: left bottom;
-      transform-origin: left bottom;
-    }
-  }
+	@include panel;
+	margin: 20px 0 0;
+	> h4 {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			display: block;
+			background: #eee;
+			-webkit-transform: scaleY(0.5);
+			-ms-transform: scaleY(0.5);
+			transform: scaleY(0.5);
+			-webkit-transform-origin: left bottom;
+			transform-origin: left bottom;
+		}
+	}
 	.content {
 		@include flex;
 		.item {
 			height: 140px;
 			position: relative;
-      overflow: hidden;
+			overflow: hidden;
 
-      &:before {
-        content: '';
-        position: absolute;
-        height: 1px;
-        display: block;
-        left: 0;
-        width: 100%;
-        background: #eee;
-        -webkit-transform: scaleY(.5);
-        -ms-transform: scaleY(.5);
-        transform: scaleY(.5);
-        -webkit-transform-origin: left bottom;
-        transform-origin: left bottom;
-        margin-left: 68px;
-        bottom: 1px;
-      }
-      &:last-child:before {
-        display: none;
-      }
+			&:before {
+				content: '';
+				position: absolute;
+				height: 1px;
+				display: block;
+				left: 0;
+				width: 100%;
+				background: #eee;
+				-webkit-transform: scaleY(0.5);
+				-ms-transform: scaleY(0.5);
+				transform: scaleY(0.5);
+				-webkit-transform-origin: left bottom;
+				transform-origin: left bottom;
+				margin-left: 68px;
+				bottom: 1px;
+			}
+			&:last-child:before {
+				display: none;
+			}
 
 			> img {
 				float: left;
-				width: 80px;
+				width: 88px;
 				height: 88px;
 				margin: 24px 32px 0;
 			}

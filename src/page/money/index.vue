@@ -5,7 +5,8 @@
     <Ada />
     <FinancingChoice />
     <Adb />
-    <Footor />
+    <Finance />
+    <Footor cname='mfooter'/>
     <Navbar />
   </div>
 </template>
@@ -18,6 +19,7 @@ import FinancingChoice from './financing-choice.vue'
 import Ada from './ada.vue'
 import Adb from './adb.vue'
 import Navbar from '@/components/public/navbar.vue'
+import Finance from './finance'
 
 export default {
   components: {
@@ -27,10 +29,18 @@ export default {
     Slider,
     Ada,
     Adb,
-    FinancingChoice
+    FinancingChoice,
+    Finance
   }
 }
 </script>
 
-<style lang="scss" module>
+<style lang="scss">
+.mfooter {
+  ul {
+    li:first-child {
+      display: none;
+    }
+  }
+}
 </style>

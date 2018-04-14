@@ -2,7 +2,7 @@
   <Panel title="新品推荐" :class="$style.panel">
     <section :class="$style.content">
       <div class="arrow">
-        更多尖货 >
+        更多尖货
       </div>
       <Slider :options="options" :items="items" cname="product-slider"></Slider>
     </section>
@@ -81,10 +81,20 @@ export default {
       &>div {
         position: absolute;
         font-size: 28px;
-        color: 999;
+        color: #999;
         font-size: 28px;
         right: 20px;
-        top: -70px;
+        top: -112px;
+        background: url(//m.jr.jd.com/spe/qyy/main/images/icon_arrow1.png) center right no-repeat;
+        background-size: 18px 28px;
+        height: 112px;
+        max-width: 40%;
+        line-height: 112px;
+        padding: 0 32px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
       }
     }
   }

@@ -4,7 +4,7 @@
     <section :class="$style.list">
       <div :class="$style.item" v-for="item in enters" :key="item.src">
         <router-link :to="{name: item.href}">
-          <img :src="item.img" alt="item.title"></img>
+          <img :src="item.img" alt="item.title">
           <h4>{{ item.title }}</h4>
         </router-link>
       </div>
@@ -15,9 +15,9 @@
 <script>
 import Slider from '@/components/core/slider.vue'
 export default {
-  components: {
-    Slider
-  },
+	components: {
+		Slider,
+	},
 	data() {
 		return {
 			items: [
@@ -69,7 +69,7 @@ export default {
 				},
 			],
 		}
-	}
+	},
 }
 </script>
 <style lang='scss' module>

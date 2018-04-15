@@ -2,6 +2,7 @@
   <Panel title="下载APP" :class="$style.panel">
     <section :class="$style.content">
       <p>立即下载</p>
+      <span>©2014-2017 JD.com.All Rights Reserved</span>
     </section>
   </Panel>
 </template>
@@ -55,7 +56,13 @@ body {
 			position: fixed;
 			bottom: 0;
 			margin-bottom: 5rem;
-		}
+    }
+    span {
+      position: fixed;
+      bottom: 10px;
+      font-size: 12px;
+      color: #999;
+    }
 	}
 
 	@media screen and (max-width: 360px) {

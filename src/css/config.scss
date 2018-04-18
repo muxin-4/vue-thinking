@@ -1,6 +1,17 @@
-
+// navbar文字高亮
 .router-link-exact-active {
   p {
     color: #ff0000!important;
   }
+}
+
+// 活动页背景图
+.ui-body {
+	background: url('//img12.360buyimg.com/jrpmobile/jfs/t8956/285/1249806938/50853/8cd3c8f0/59b65f36N05367075.png?')
+		center center no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: 100% auto;
+	margin-top: -200px;
+	display: block;
 }

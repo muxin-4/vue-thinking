@@ -6,6 +6,8 @@ html, body {
 	-webkit-user-select: none;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
   font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
 	user-select: none;
 	width: 100%;

@@ -3,6 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// fastclick 消除click移动浏览器上物理点击和事件触发之间300毫秒的延迟。
+// npm文档地址 https://www.npmjs.com/package/fastclick
+import  fastclick from 'fastclick'
+
+attachFastClick(document.body)
 
 Vue.config.productionTip = false
 
